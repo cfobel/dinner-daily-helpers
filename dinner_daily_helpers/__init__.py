@@ -13,9 +13,11 @@ ureg = pint.UnitRegistry(system='cgs')
 # Add non-default units used by Dinner Daily.
 ureg.define('bulb = []')
 ureg.define('bunch = []')
+ureg.define('each = []')
 ureg.define('head = []')
 ureg.define('loaf = []')
 ureg.define('package = []')
+ureg.define('packet = []')
 ureg.define('rib = []')
 
 
