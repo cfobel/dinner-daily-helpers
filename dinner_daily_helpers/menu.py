@@ -170,25 +170,26 @@ def ingredients_table(menu, decode_processing=True):
     if not decode_processing:
         return df_ingredients
 
-    df_decode_ingredients = \
-        df_ingredients.ingredient.str.extract(r'^(?P<quantity>[\d\/]+'
-                                              r'(\s+[\d\/]+)?)\s+'
-                                              r'((?P<unit>\S+)\s+)?'
-                                              r'(?P<description>\S+.*?)'
-                                              r'(,\s+divided)?$',
-                                              expand=False)
+    cre_quantity = re.compile(
+        r"^(?P<quantity>(?P<whole>[\d\/]+)"
+        r"(?P<fraction>(\s+[\d\/]+))?)\s+"
+        r"((?P<unit>\S+)\s+)?(?P<description>\S+.*?)"
+        r"(,\s+divided)?$"
+    )
+
+    df_decode_ingredients = df_ingredients.ingredient.str.extract(
+        cre_quantity, expand=False
+    )
     # Drop implied unnamed groups: 1) from `quantity` named group, and 2) from
     # `", divided"`.
-    df_decode_ingredients.drop([1, 2, 5], axis=1, inplace=True)
+    df_decode_ingredients.drop([3, 4, 7], axis=1, inplace=True)
 
     isna = df_decode_ingredients['quantity'].isna()
-    df_decode_ingredients.loc[isna, 'description'] =\
-        df_ingredients['ingredient']
     df_decode_ingredients.loc[isna, 'quantity'] = 1
 
     # Set unit to `"each"` for ingredients where no units were specified.
     for i, ingredient_i in df_decode_ingredients.iterrows():
-        (quantity_i, unit_i, desc_i) = ingredient_i
+        (quantity_i, unit_i, desc_i) = ingredient_i[["quantity", "unit", "description"]]
         try:
             ureg.parse_expression('%s %s' % (quantity_i, unit_i))
         except pint.UndefinedUnitError:
