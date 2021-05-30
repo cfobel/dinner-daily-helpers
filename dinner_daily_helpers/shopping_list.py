@@ -8,7 +8,7 @@ from . import ureg
 
 
 def extract_shopping_list(shopping_list_html, csv=False):
-    '''
+    """
     Returns
     -------
     pandas.DataFrame or str
@@ -62,32 +62,32 @@ def extract_shopping_list(shopping_list_html, csv=False):
             42        NaN        staple                   salad dressing      1      True
             43        NaN        staple               toasted sesame oil      5     False
             44        NaN        staple                         turmeric      3     False
-    '''
-    soup = bs4.BeautifulSoup(shopping_list_html, 'html5lib')
-    staple_ingredient_items = soup.select('section#menu-key div#staple > '
-                                          'ul.shopping-list > li')
+    """
+    soup = bs4.BeautifulSoup(shopping_list_html, "html5lib")
+    staple_ingredient_items = soup.select(
+        "section#menu-key div#staple > " "ul.shopping-list > li"
+    )
 
-    df_staple_ingredients = (pd.DataFrame([(i + 1,
-                                            ingredient.replace('*', '')
-                                            .lower(), '*' in ingredient)
-                                           for i, staple_ingredient_item_i in
-                                           enumerate(staple_ingredient_items)
-                                           for ingredient in
-                                           re.split(r',\s*',
-                                                    staple_ingredient_item_i
-                                                    .select('span')[-1]
-                                                    .contents[0])],
-                                          columns=['meal', 'ingredient',
-                                                   'side_dish'])
-                             .drop_duplicates('ingredient'))
-    df_staple_ingredients.insert(0, 'category', 'staple')
+    df_staple_ingredients = pd.DataFrame(
+        [
+            (i + 1, ingredient.replace("*", "").lower(), "*" in ingredient)
+            for i, staple_ingredient_item_i in enumerate(staple_ingredient_items)
+            for ingredient in re.split(
+                r",\s*", staple_ingredient_item_i.select("span")[-1].contents[0]
+            )
+        ],
+        columns=["meal", "ingredient", "side_dish"],
+    ).drop_duplicates("ingredient")
+    df_staple_ingredients.insert(0, "category", "staple")
 
-    ingredient_items = soup.select('section#main-list div > div.list-section >'
-                                   ' ul.shopping-list > li.list-item')
+    ingredient_items = soup.select(
+        "section#main-list div > div.list-section >" " ul.shopping-list > li.list-item"
+    )
 
-    df_ingredients = pd.DataFrame(map(extract_ingredient, ingredient_items),
-                                  columns=['meal', 'category', 'ingredient',
-                                           'side_dish'])
+    df_ingredients = pd.DataFrame(
+        map(extract_ingredient, ingredient_items),
+        columns=["meal", "category", "ingredient", "side_dish"],
+    )
     df_ingredients.dropna(inplace=True)
     cre_ingredient = re.compile(
         r"^(?P<name>.*?)\s*\((?P<drop3>(?P<quantity>(?P<whole>[\d\/]+)(?P<fraction>\s+(?P<num>\d+)\/(?P<denom>\d+))?)?(?P<drop1>\s+(?P<unit>.*?))?)?(?P<optional>\s*(?P<drop2>, )?optional)?\)"
@@ -143,18 +143,18 @@ def extract_shopping_list(shopping_list_html, csv=False):
 
 
 def extract_ingredient(ingredient_item):
-    category_i = ingredient_item.find_parent('div').attrs['id']
+    category_i = ingredient_item.find_parent("div").attrs["id"]
 
-    for i in range(1, 6) + ['multi']:
-        if u'list-%s' % i in ingredient_item.attrs['class']:
+    for i in range(1, 6) + ["multi"]:
+        if u"list-%s" % i in ingredient_item.attrs["class"]:
             meal_i = i
             break
     else:
         meal_i = None
-    name_i = ingredient_item.select('span')[3].contents[0] if meal_i else None
+    name_i = ingredient_item.select("span")[3].contents[0] if meal_i else None
     if name_i is not None:
-        side_dish_i = '*' in name_i
-        name_i = name_i.replace('*', '')
+        side_dish_i = "*" in name_i
+        name_i = name_i.replace("*", "")
     else:
         side_dish_i = None
     return (meal_i, category_i, name_i, side_dish_i)
