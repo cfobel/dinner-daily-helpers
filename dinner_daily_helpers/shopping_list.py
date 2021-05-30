@@ -89,26 +89,55 @@ def extract_shopping_list(shopping_list_html, csv=False):
                                   columns=['meal', 'category', 'ingredient',
                                            'side_dish'])
     df_ingredients.dropna(inplace=True)
-    df_ingredients = df_ingredients.join(df_ingredients.ingredient.str
-                                         .extract(r'^(?P<name>.*?)\s*'
-                                                  r'\((?P<quantity>[^\)]+)\)$',
-                                                  expand=False))
+    cre_ingredient = re.compile(
+        r"^(?P<name>.*?)\s*\((?P<drop3>(?P<quantity>(?P<whole>[\d\/]+)(?P<fraction>\s+(?P<num>\d+)\/(?P<denom>\d+))?)?(?P<drop1>\s+(?P<unit>.*?))?)?(?P<optional>\s*(?P<drop2>, )?optional)?\)"
+    )
+    df_ingredients = df_ingredients.join(
+        df_ingredients.ingredient.str.extract(cre_ingredient, expand=False)
+    )
+    # If 'fraction' is `None`, use `quantity`; otherwise, use `whole` * `denom`
+    # df_ingredients.loc[df_ingredients.fraction.isnull(),
+    #                    'quantity'] = df_ingredients.quantity
+    fractions = df_ingredients.loc[
+        ~df_ingredients.fraction.isnull(), ["whole", "denom", "num"]
+    ].astype(int)
+    df_ingredients.loc[~df_ingredients.fraction.isnull(), "quantity"] = fractions.apply(
+        lambda x: u"{}/{}".format(x.whole * x.denom + x.num, x.denom), axis=1
+    )
+    df_ingredients.drop(
+        ["drop1", "drop2", "drop3", "fraction", "denom", "num", "whole", "optional"],
+        axis=1,
+        inplace=True,
+    )
+    # For ingredients with no unit specified, assume "each".
+    df_ingredients.loc[
+        df_ingredients.category != "staple", "unit"
+    ] = df_ingredients.unit.fillna("each")
     df_ingredients.name = df_ingredients.name.str.lower()
-    df_ingredients.drop('ingredient', axis=1, inplace=True)
-    df_ingredients.rename(columns={'name': 'ingredient'}, inplace=True)
+    df_ingredients.drop("ingredient", axis=1, inplace=True)
+    df_ingredients.rename(columns={"name": "ingredient"}, inplace=True)
     df_ingredients = pd.concat([df_staple_ingredients, df_ingredients])
-    df_ingredients.sort_values(['category', 'ingredient', 'meal'], inplace=True)
+    df_ingredients.sort_values(["category", "ingredient", "meal"], inplace=True)
     df_ingredients.reset_index(inplace=True, drop=True)
 
-    # df_ingredients.insert(2, 'quantity_imperial',
-                          # df_ingredients.quantity.astype(str)
-                          # .map(ureg.parse_expression))
-    # df_ingredients.insert(3, 'quantity_metric',
-                          # [q.to_base_units() if isinstance(q, ureg.Quantity)
-                           # else q for q in df_ingredients.quantity_imperial])
+    quantity_position = df_ingredients.columns.tolist().index("quantity")
+    df_ingredients.ingredient = df_ingredients.ingredient.str.strip()
+    quantities = (
+        df_ingredients[["quantity", "unit"]]
+        .dropna()
+        .astype(unicode)
+        .agg(u" ".join, axis=1)
+    )
+    imperial_quantity = quantities.map(ureg.parse_expression)
+    metric_quantity = imperial_quantity.map(
+        lambda q: q.to_base_units() if isinstance(q, ureg.Quantity) else q
+    )
+    df_ingredients.insert(quantity_position + 1, "quantity_imperial", imperial_quantity)
+    df_ingredients.insert(quantity_position + 2, "quantity_metric", metric_quantity)
+    df_ingredients.set_index(["category", "ingredient"], inplace=True)
 
     if csv:
-        return df_ingredients.to_csv(index=False, encoding='utf8')
+        return df_ingredients.to_csv(index=False, encoding="utf8")
     else:
         return df_ingredients
 
