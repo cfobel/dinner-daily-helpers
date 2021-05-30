@@ -14,115 +14,129 @@ from . import ureg
 def dish_to_markdown(dish):
     output = io.StringIO()
 
-    print('# %s' % dish['title'], file=output)
-    print('', file=output)
+    print("# %s" % dish["title"], file=output)
+    print("", file=output)
 
     # Write ingredients list as Markdown table.
-    ingredients_ij = dish['ingredients']
+    ingredients_ij = dish["ingredients"]
     ingredients_count_ij = len(ingredients_ij)
-    left_ij = ingredients_ij[:ingredients_count_ij // 2]
-    right_ij = ingredients_ij[ingredients_count_ij // 2:]
+    left_ij = ingredients_ij[: ingredients_count_ij // 2]
+    right_ij = ingredients_ij[ingredients_count_ij // 2 :]
 
-    print('## Ingredients', file=output)
-    print('', file=output)
-    print('| |', file=output)
-    print('|------|------|', file=output)
+    print("## Ingredients", file=output)
+    print("", file=output)
+    print("| |", file=output)
+    print("|------|------|", file=output)
 
     for left, right in it.izip_longest(left_ij, right_ij):
         if left is not None:
-            print('| %s | %s |' % (left, right), file=output)
+            print("| %s | %s |" % (left, right), file=output)
         else:
-            print('| %s |    |' % right, file=output)
-    print('', file=output)
+            print("| %s |    |" % right, file=output)
+    print("", file=output)
 
-    print('## Instructions', file=output)
-    print('', file=output)
-    instructions_i = [' %d. %s' % (i + 1, instruction)
-                      for i, instruction in enumerate(dish['instructions'])]
-    print('\n'.join(instructions_i), file=output)
+    print("## Instructions", file=output)
+    print("", file=output)
+    instructions_i = [
+        " %d. %s" % (i + 1, instruction)
+        for i, instruction in enumerate(dish["instructions"])
+    ]
+    print("\n".join(instructions_i), file=output)
     return output.getvalue().strip()
 
 
 def extract_meal(meal_div):
     # Duration
-    duration_i = meal_div.find('span', class_='duration').contents[0]
+    duration_i = meal_div.find("span", class_="duration").contents[0]
 
     # Main dish title
-    title_i = meal_div.select_one('h3 span.label').contents[0]
+    title_i = meal_div.select_one("h3 span.label").contents[0]
 
     def extract_recipe(recipe_div):
         recipe = {}
 
         # ## Title
-        title_span = recipe_div.select_one('h5 > span.label')
+        title_span = recipe_div.select_one("h5 > span.label")
         if title_span is not None:
-            recipe['title'] = title_span.contents[0]
+            recipe["title"] = title_span.contents[0]
 
         # ## Ingredients
-        recipe['ingredients'] = [li.contents[0]
-                                 for li in recipe_div.select('li')]
+        recipe["ingredients"] = [li.contents[0] for li in recipe_div.select("li")]
 
         # ## Instructions
-        recipe['instructions'] = re.sub(r'\.\s+', '.\n',
-                                        recipe_div
-                                        .select_one('div.instructions p')
-                                        .contents[0]).splitlines()
+        recipe["instructions"] = re.sub(
+            r"\.\s+", ".\n", recipe_div.select_one("div.instructions p").contents[0]
+        ).splitlines()
         return recipe
 
     # Main dish
-    main_dish_div_i = meal_div.select_one('div.dishes > div.details')
+    main_dish_div_i = meal_div.select_one("div.dishes > div.details")
     main_dish_i = extract_recipe(main_dish_div_i)
-    main_dish_i['title'] = title_i
+    main_dish_i["title"] = title_i
 
     # Side dishes
-    side_dishes_i = [extract_recipe(dish_div_ij) for dish_div_ij in meal_div
-                     .select('div.dishes > div.side-dishes > div.details')
-                     if dish_div_ij.select_one('h5.side-heading > span.label')
-                     .contents[0].lower() != 'add a side']
+    side_dishes_i = [
+        extract_recipe(dish_div_ij)
+        for dish_div_ij in meal_div.select("div.dishes > div.side-dishes > div.details")
+        if dish_div_ij.select_one("h5.side-heading > span.label").contents[0].lower()
+        != "add a side"
+    ]
 
     # Meal nutrition
-    nutrition_i = [li.contents[0]
-                   for li in meal_div.select('ul.nutrition > li')]
+    nutrition_i = [li.contents[0] for li in meal_div.select("ul.nutrition > li")]
 
-    meal = {'main_dish': main_dish_i,
-            'side_dishes': side_dishes_i,
-            'duration': duration_i,
-            'nutrition': nutrition_i}
+    meal = {
+        "main_dish": main_dish_i,
+        "side_dishes": side_dishes_i,
+        "duration": duration_i,
+        "nutrition": nutrition_i,
+    }
 
     # Meal notes
-    notes_div_i = meal_div.find('div', class_='recipe-notes')
+    notes_div_i = meal_div.find("div", class_="recipe-notes")
     if notes_div_i is not None:
-        meal['notes'] = [p.contents[0] for p in notes_div_i.select('p')]
+        meal["notes"] = [p.contents[0] for p in notes_div_i.select("p")]
     return meal
 
 
 def extract_menu(weekly_html):
-    soup = bs4.BeautifulSoup(weekly_html, 'html5lib')
+    soup = bs4.BeautifulSoup(weekly_html, "html5lib")
     try:
         # Parse title, store, date, and servings from menus up until 2019-03-17
-        result = dict(zip(['store', 'date', 'servings'],
-                          [s.strip() for s in soup.select_one('header > h2')
-                           .contents[0].split('-')]))
-        result['title'] = soup.select_one('header > h1').contents[0].strip()
+        result = dict(
+            zip(
+                ["store", "date", "servings"],
+                [
+                    s.strip()
+                    for s in soup.select_one("header > h2").contents[0].split("-")
+                ],
+            )
+        )
+        result["title"] = soup.select_one("header > h1").contents[0].strip()
     except AttributeError:
         try:
             # Parse title, store, date, and servings from menus after 2019-03-17
             result = {}
-            result['title'] = soup.select_one('header div#family-label > '
-                                            'h1').text.strip()
-            result['date'] = soup.select_one('header .theme-date').text.split('-')[-1].strip()
-            result['store'] = soup.select_one('header .theme-store-name').text
-            result['servings'] = soup.select_one('header div#family-label > h2').text
+            result["title"] = soup.select_one(
+                "header div#family-label > " "h1"
+            ).text.strip()
+            result["date"] = (
+                soup.select_one("header .theme-date").text.split("-")[-1].strip()
+            )
+            result["store"] = soup.select_one("header .theme-store-name").text
+            result["servings"] = soup.select_one("header div#family-label > h2").text
         except Exception:
-            import pdb; pdb.set_trace()  # XXX BREAKPOINT
-    menu_list = soup.find('ul', id='menu')
-    meal_items = menu_list.find_all('li', id=re.compile('item-\d+'))
-    result['meals'] = [extract_meal(meal_div_i) for meal_div_i in meal_items]
+            import pdb
+
+            pdb.set_trace()  # XXX BREAKPOINT
+    menu_list = soup.find("ul", id="menu")
+    meal_items = menu_list.find_all("li", id=re.compile("item-\d+"))
+    result["meals"] = [extract_meal(meal_div_i) for meal_div_i in meal_items]
     return result
 
 
 def ingredients_table(menu, decode_processing=True):
-    '''
+    """
     Parameters
     ----------
     menu : dict
@@ -152,20 +166,23 @@ def ingredients_table(menu, decode_processing=True):
             2     0  Southwest Chicken Wraps  False      1/4  each            onion, small           chopped
             3     0  Southwest Chicken Wraps  False      1/2   cup             frozen corn               NaN
             4     0  Southwest Chicken Wraps  False        8    oz             black beans  drained & rinsed
-    '''
+    """
     ingredients = []
 
-    for i, meal_i in enumerate(menu['meals']):
-        main_name_i = meal_i['main_dish']['title']
-        ingredients += [(i + 1, main_name_i, ingredient, False)
-                        for ingredient in
-                        meal_i['main_dish']['ingredients']]
-        for j, side_ij in enumerate(meal_i['side_dishes']):
-            ingredients += [(i + 1, side_ij['title'], ingredient, True)
-                            for ingredient in side_ij['ingredients']]
-    df_ingredients = pd.DataFrame(ingredients, columns=['meal', 'dish',
-                                                        'ingredient',
-                                                        'side'])
+    for i, meal_i in enumerate(menu["meals"]):
+        main_name_i = meal_i["main_dish"]["title"]
+        ingredients += [
+            (i + 1, main_name_i, ingredient, False)
+            for ingredient in meal_i["main_dish"]["ingredients"]
+        ]
+        for j, side_ij in enumerate(meal_i["side_dishes"]):
+            ingredients += [
+                (i + 1, side_ij["title"], ingredient, True)
+                for ingredient in side_ij["ingredients"]
+            ]
+    df_ingredients = pd.DataFrame(
+        ingredients, columns=["meal", "dish", "ingredient", "side"]
+    )
 
     if not decode_processing:
         return df_ingredients
@@ -184,35 +201,42 @@ def ingredients_table(menu, decode_processing=True):
     # `", divided"`.
     df_decode_ingredients.drop([3, 4, 7], axis=1, inplace=True)
 
-    isna = df_decode_ingredients['quantity'].isna()
-    df_decode_ingredients.loc[isna, 'quantity'] = 1
+    isna = df_decode_ingredients["quantity"].isna()
+    df_decode_ingredients.loc[isna, "quantity"] = 1
 
     # Set unit to `"each"` for ingredients where no units were specified.
     for i, ingredient_i in df_decode_ingredients.iterrows():
         (quantity_i, unit_i, desc_i) = ingredient_i[["quantity", "unit", "description"]]
         try:
-            ureg.parse_expression('%s %s' % (quantity_i, unit_i))
+            ureg.parse_expression("%s %s" % (quantity_i, unit_i))
         except pint.UndefinedUnitError:
             # No recognized unit.  Assume unit is omitted, and assume "each".
             if unit_i == unit_i and isinstance(unit_i, six.string_types):
-                desc_i = '%s %s' % (unit_i, desc_i)
-            unit_i = 'each'
+                desc_i = "%s %s" % (unit_i, desc_i)
+            unit_i = "each"
             ingredient_i.description = desc_i
             ingredient_i.unit = unit_i
 
     # Extract any processing instructions.
-    actions = ['chopped', 'peeled', 'minced', 'diced', 'sliced', 'drained',
-               'rinsed', 'ends trimmed', 'shredded']
-    df_processing = (df_decode_ingredients.description.str
-                     .extract(r'(?P<root>.*?)'
-                              r'(,\s+(?P<processing>[^,]*(%s)[^,]*))?$'
-                              % '|'.join(actions), expand=True)[['root',
-                                                                 'processing']])
-    df_decode_ingredients['description'] = df_processing['root']
-    df_decode_ingredients['processing'] = df_processing['processing']
+    actions = [
+        "chopped",
+        "peeled",
+        "minced",
+        "diced",
+        "sliced",
+        "drained",
+        "rinsed",
+        "ends trimmed",
+        "shredded",
+    ]
+    df_processing = df_decode_ingredients.description.str.extract(
+        r"(?P<root>.*?)" r"(,\s+(?P<processing>[^,]*(%s)[^,]*))?$" % "|".join(actions),
+        expand=True,
+    )[["root", "processing"]]
+    df_decode_ingredients["description"] = df_processing["root"]
+    df_decode_ingredients["processing"] = df_processing["processing"]
 
     df_decode_ingredients = df_ingredients.join(df_decode_ingredients)
-    df_decode_ingredients.drop('ingredient', axis=1, inplace=True)
-    df_decode_ingredients.rename(columns={'description': 'ingredient'},
-                                 inplace=True)
+    df_decode_ingredients.drop("ingredient", axis=1, inplace=True)
+    df_decode_ingredients.rename(columns={"description": "ingredient"}, inplace=True)
     return df_decode_ingredients
