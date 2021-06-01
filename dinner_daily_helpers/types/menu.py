@@ -27,18 +27,18 @@ class Option(BaseModel):
 
 
 class Dish(BaseModel):
-    big_image_url: str
+    big_image_url: Optional[str] = None
     cooking_time: float
     dish_type: DishType
     id: int
     ingredients: List[str]
     instructions: str
     is_personal: bool
-    large_image_url: str
+    large_image_url: Optional[str] = None
     name: str
     preparation_time: float
     protein_category: Optional[ProteinCategory]
-    small_image_url: str
+    small_image_url: Optional[str] = None
 
 
 class DayMenu(BaseModel):
