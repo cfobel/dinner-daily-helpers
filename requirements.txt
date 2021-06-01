@@ -4,5 +4,6 @@ html5lib
 jinja2
 pandas
 pint
+pydantic
 requests
 six
