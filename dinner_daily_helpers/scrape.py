@@ -9,15 +9,11 @@ from pydantic import BaseModel
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+from .types.week import Week, WeekOption
 from .types.menu import Menu
 from .types.shopping_list import ShoppingList
 
-__all__ = ["Week", "WeekOption", "scrape_week"]
-
-
-class WeekOption(str, enum.Enum):
-    PREVIOUS = "previous"
-    CURRENT = "current"
+__all__ = ["scrape_week"]
 
 
 class LoginFields(BaseModel):
@@ -80,11 +76,6 @@ fetch("{ url }", {{
     }});
 }});"""
     return browser.execute_async_script(script)
-
-
-class Week(BaseModel):
-    menu: Menu
-    shopping_list: ShoppingList
 
 
 def scrape_week(
