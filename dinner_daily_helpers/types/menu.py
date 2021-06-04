@@ -38,7 +38,7 @@ class Dish(BaseModel):
     large_image_url: Optional[str] = None
     name: str
     preparation_time: float
-    protein_category: Optional[ProteinCategory]
+    protein_category: Optional[ProteinCategory] = None
     small_image_url: Optional[str] = None
 
 
