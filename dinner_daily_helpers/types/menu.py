@@ -1,3 +1,4 @@
+import datetime as dt
 import enum
 from typing import List, Optional
 
@@ -74,3 +75,11 @@ class Menu(BaseModel):
     metadata: MetaData
     name: str
     side_recipe_options: List[Option]
+
+    @property
+    def start_datetime(self):
+        return dt.datetime.strptime(self.start_date, TIME_FORMAT)
+
+    @property
+    def end_datetime(self):
+        return dt.datetime.strptime(self.end_date, TIME_FORMAT)
