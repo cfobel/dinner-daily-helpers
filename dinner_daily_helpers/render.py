@@ -59,10 +59,19 @@ def render(
             else:
                 markdown_str = menu_markdown.getvalue().encode("utf8")
                 # Dump as HTML.
-                command = (
-                    'pandoc -f gfm -t html - --template "%s" --toc --toc-depth 2'
-                    % templates_dir.joinpath("GitHub.html5")
-                )
+                command = [
+                    "pandoc",
+                    "-f",
+                    "gfm",
+                    "-t",
+                    "html",
+                    "-",
+                    "--template",
+                    templates_dir.joinpath("GitHub.html5"),
+                    "--toc",
+                    "--toc-depth",
+                    "2",
+                ]
                 process = sp.Popen(command, stdout=sp.PIPE, stdin=sp.PIPE)
                 process.stdin.write(markdown_str)
                 stdout, stderr = process.communicate()
