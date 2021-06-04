@@ -4,7 +4,9 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-__all__ = ["Menu"]
+__all__ = ["Menu", "TIME_FORMAT"]
+
+TIME_FORMAT = "%Y-%m-%dT%H:%M:%S+00:00"
 
 
 class ProteinCategory(int, enum.Enum):
