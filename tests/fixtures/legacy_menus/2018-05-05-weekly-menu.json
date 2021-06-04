@@ -1,0 +1,289 @@
+{
+    "date": "May 5th 2018",
+    "meals": [
+        {
+            "duration": "30 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1 lb salmon fillets",
+                    "1/2 tbs olive oil",
+                    "2 tbs balsamic vinegar",
+                    "1 garlic clove, minced",
+                    "2 tbs orange juice",
+                    "1 tbs fresh parsley, chopped",
+                    "2 tbs fresh lime juice"
+                ],
+                "instructions": [
+                    "Sprinkle fish with salt & pepper.",
+                    "Mix remaining ingredients in shallow baking dish.",
+                    "Place fish in dish, turn to coat.",
+                    "Marinate in fridge for up to 30 min, if time allows.",
+                    "Preheat oven to 375.",
+                    "Transfer dish to oven & bake for about 15 to 20 mins or until fish is no longer opaque and flakes easily with fork."
+                ],
+                "title": "Citrus Salmon"
+            },
+            "nutrition": [
+                "418 Cals",
+                "39g Protein",
+                "21g Fat",
+                "3g Fiber",
+                "18g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 package salad mix",
+                        "1 tbs salad dressing"
+                    ],
+                    "instructions": [
+                        "In a large bowl prepare salad mix according to package directions.",
+                        "Toss with dressing of choice."
+                    ],
+                    "title": "Green Salad"
+                },
+                {
+                    "ingredients": [
+                        "1/2 tbs olive oil",
+                        "1/4 onion, small, chopped",
+                        "1 garlic clove, minced",
+                        "1/2 head cauliflower, chopped",
+                        "2 tbs water",
+                        "1 tbs italian salad dressing",
+                        "1/4 green pepper, chopped"
+                    ],
+                    "instructions": [
+                        "Heat oil in skillet, add onion and cook for 5 minutes.",
+                        "Add garlic and cook for 30 seconds more.",
+                        "Add cauliflower, water, & italian dressing.",
+                        "Cover & cook 5 mins.",
+                        "Add green pepper, salt & pepper & cook 5 mins more uncovered."
+                    ],
+                    "title": "Cauliflower Italiano"
+                }
+            ]
+        },
+        {
+            "duration": "30 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1/4 loaf italian bread, cubed",
+                    "1 1/2 tbs olive oil",
+                    "14 oz diced tomatoes",
+                    "3/4 lb boneless chicken breast",
+                    "1 garlic clove, minced",
+                    "1/4 cup shredded parmesan cheese"
+                ],
+                "instructions": [
+                    "Put bread into bowl.",
+                    "Pour 1 tbs of oil & tomatoes over bread.",
+                    "Let soak 10 minutes.",
+                    "Cut chicken into cubes.",
+                    "Heat remaining oil in large skillet on medium heat.",
+                    "Add garlic & cook 1 minute.",
+                    "Add chicken & cook until cooked through, about 5 to 8 minutes.",
+                    "Remove from pan.",
+                    "Pour bread mix into pan & cook 5 minutes on low until warmed.",
+                    "Return chicken & gently stir into bread.",
+                    "Sprinkle with cheese and serve."
+                ],
+                "title": "Chicken Panzanella"
+            },
+            "nutrition": [
+                "461 Cals",
+                "41g Protein",
+                "19g Fat",
+                "4g Fiber",
+                "31g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 tbs olive oil",
+                        "1/4 bunch asparagus",
+                        " sea salt"
+                    ],
+                    "instructions": [
+                        "Preheat oven to 375.",
+                        "Place asparagus in baking dish, drizzle with olive oil.",
+                        "Sprinkle with salt & pepper.",
+                        "Cook 8 to 10 minutes until just tender."
+                    ],
+                    "title": "Roasted Asparagus"
+                }
+            ]
+        },
+        {
+            "duration": "25 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1 tbs soy sauce (or tamari)",
+                    "1 tbs fresh lemon juice",
+                    "2 tbs fresh parsley, chopped",
+                    "1 1/2 tsp toasted sesame oil",
+                    "2 garlic cloves, minced",
+                    "1/4 bunch asparagus, chopped",
+                    "3/4 lb shrimp, raw, peeled and deveined"
+                ],
+                "instructions": [
+                    "Thaw shrimp if frozen.",
+                    "Mix soy sauce, lemon juice & parsley in small bowl, set aside.",
+                    "Heat oil in large skillet.",
+                    "Add garlic and cook for a minute until golden.",
+                    "Add asparagus and cook for about 4 minutes.",
+                    "Add shrimp and stir in soy and lemon mixture.",
+                    "Cook for 3 to 4 minutes more until shrimp becomes opaque/pink."
+                ],
+                "title": "Shrimp & Asparagus Stir Fry"
+            },
+            "notes": [
+                "Can Prep Shrimp & Veggies in Advance"
+            ],
+            "nutrition": [
+                "388 Cals",
+                "25g Protein",
+                "12g Fat",
+                "4g Fiber",
+                "49g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/4 red cabbage, chopped or shredded",
+                        "2 carrots, chopped or shredded",
+                        "1 tbs plain sesame oil",
+                        "1 tbs rice vinegar"
+                    ],
+                    "instructions": [
+                        "Combine cabbage & carrots in bowl.",
+                        "Toss with oil, vinegar, salt & pepper.",
+                        "Note: this also works well with pre-shredded cabbage and carrots to save time."
+                    ],
+                    "title": "Cabbage & Carrot Slaw"
+                },
+                {
+                    "ingredients": [
+                        "1 1/4 cups quick cooking brown rice"
+                    ],
+                    "instructions": [
+                        "Prepare brown rice according to package directions.",
+                        "If you want, add a little oil to rice while cooking (optional), or mix in some fresh herbs at the end (optional)."
+                    ],
+                    "title": "Quick Cooking Brown Rice"
+                }
+            ]
+        },
+        {
+            "duration": "30 mins",
+            "main_dish": {
+                "ingredients": [
+                    "4 oz rotini pasta",
+                    "1 lb boneless chicken breast",
+                    " garlic powder, to taste",
+                    "1/2 tbs olive oil",
+                    "1/2 onion, medium, sliced",
+                    "1/4 cup balsamic vinaigrette dressing",
+                    "1 tomato, chopped",
+                    "1/4 cup feta cheese"
+                ],
+                "instructions": [
+                    "Cook pasta according to package & set aside.",
+                    "Cut chicken into large pieces and season with salt, pepper, & garlic powder.",
+                    "Heat oil in skillet on medium heat.",
+                    "Add chicken, brown on both sides and cook until no longer pink inside.",
+                    "Remove and set aside.",
+                    "Add onion and cook for a few minutes.",
+                    "Add dressing, tomatoes, & chicken to pan and heat for 5 to 8 minutes.",
+                    "Place pasta in medium serving bowl & stir in chicken skillet mix.",
+                    "Top with feta."
+                ],
+                "title": "Chicken Rotini"
+            },
+            "nutrition": [
+                "563 Cals",
+                "47g Protein",
+                "26g Fat",
+                "4g Fiber",
+                "35g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1 tbs orange juice",
+                        "1 tbs olive oil",
+                        "1/2 tbs apple cider vinegar",
+                        "2 1/2 oz baby kale",
+                        "1 orange, peeled & sliced",
+                        "2 oz goat cheese, crumbled (optional)"
+                    ],
+                    "instructions": [
+                        "In serving bowl, whisk orange juice, oil, vinegar and salt & pepper to taste.",
+                        "Add kale and orange slices and toss.",
+                        "Sprinkle with goat cheese (optional).",
+                        "Serve."
+                    ],
+                    "title": "Baby Kale & Orange Salad"
+                }
+            ]
+        },
+        {
+            "duration": "25 mins",
+            "main_dish": {
+                "ingredients": [
+                    "2 tomatoes, chopped",
+                    "1/2 onion, small, finely chopped",
+                    "2 tbs fresh cilantro, choppped",
+                    "1 1/2 tbs fresh lime juice",
+                    "1/4 tsp salt",
+                    "15 oz refried beans",
+                    "5 corn tortillas",
+                    "1/2 cup shredded mexican cheese, low fat",
+                    "1/2 tbs olive oil",
+                    "5 eggs",
+                    "1/4 cup sour cream, low fat (optional)"
+                ],
+                "instructions": [
+                    "In a med bowl, stir tomatoes, onion, cilantro, lime juice & salt and set aside.",
+                    "In microwave or on the stove, warm refried beans.",
+                    "Heat large skillet on med/high.",
+                    "Warm a tortilla in skillet, place on serving platter then spread evenly with refried beans and a sprinkle of cheese.",
+                    "Continue with all tortillas.",
+                    "Cover to keep warm.",
+                    "Heat oil at med/high heat in same skillet.",
+                    "Crack eggs into skillet, a few at a time, depending on size of skillet.",
+                    "Fry until whites are set and yolk is cooked as desired.",
+                    "Place one egg on top of each prepared tortilla.",
+                    "Repeat with remaining eggs.",
+                    "To serve, top each tortilla with tomato mixture.",
+                    "Optional: top with more cheese, more lime juice, and/or sour cream."
+                ],
+                "title": "Huevos Rancheros"
+            },
+            "nutrition": [
+                "718 Cals",
+                "32g Protein",
+                "41g Fat",
+                "19g Fiber",
+                "62g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "2 avocados, pitted, peeled",
+                        "1/2 lime"
+                    ],
+                    "instructions": [
+                        "Mash avocado in serving bowl.",
+                        "Squeeze lime juice over it and a pinch of salt.",
+                        "Stir.",
+                        "Optional: can also add fresh garlic and/or chopped tomatoes."
+                    ],
+                    "title": "Guacamole"
+                }
+            ]
+        }
+    ],
+    "servings": "Serves 2 to 3",
+    "store": "Walmart",
+    "title": "Menu for the Fobel Family"
+}
