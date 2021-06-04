@@ -1,25 +1,34 @@
-from __future__ import print_function, unicode_literals, division
+from __future__ import division, print_function, unicode_literals
+
 import argparse
+import enum
 import io
 import json
 import os
 import pathlib
 import subprocess as sp
 import sys
+from pathlib import Path
+from typing import Optional
 
 import jinja2
 import pandas as pd
+from pydantic import ValidationError
 
 from .menu import extract_menu, ingredients_table
-
+from .render import RenderFormat, load_legacy_menu, render
+from .types.legacy import LegacyMenu, to_legacy
+from .types.week import Week
 
 PARENT_DIR = os.path.realpath(os.path.join(__file__, os.path.pardir))
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
-
-    parser.add_argument("weekly_menu_html", help="Weekly menu HTML document.")
+    parser.add_argument(
+        "source",
+        help="A (legacy) weekly menu HTML document, a JSON LegacyMenu, or a JSON Week.",
+    )
     parser.add_argument(
         "output_path",
         default="-",
@@ -34,57 +43,19 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    with open(args.weekly_menu_html, "r") as input_:
-        menu_html = input_.read()
-
-    menu = extract_menu(menu_html)
-
     if args.json:
-        # Dump as JSON output.
-        if args.output_path == "-":
-            output = sys.stdout
-        else:
-            output = open(args.output_path, "w")
-
-        try:
-            json.dump(menu, output, indent=4, sort_keys=True)
-        finally:
-            if args.output_path != "-":
-                output.close()
+        format_ = RenderFormat.JSON
+    elif args.markdown:
+        format_ = RenderFormat.MARKDOWN
     else:
-        menu_markdown = io.StringIO()
-        templates_dir = pathlib.Path(os.path.join(PARENT_DIR, "templates"))
-        template_path = templates_dir.joinpath("weekly_menu.template.md")
-        with open(template_path, "r") as input_:
-            template = jinja2.Template(input_.read())
+        format_ = RenderFormat.HTML
 
-        df_ingredients = ingredients_table(menu)
+    source_path = Path(args.source)
+    menu = load_legacy_menu(source_path)
+    rendered = render(menu, format_=format_)
 
-        print(
-            template.render(menu=menu, df_ingredients=df_ingredients),
-            file=menu_markdown,
-        )
-
-        if args.markdown:
-            # Dump as markdown.
-            if args.output_path == "-":
-                print(menu_markdown.getvalue(), end="")
-            else:
-                with open(args.output_path, "w") as output:
-                    output.write(menu_markdown.getvalue())
-        else:
-            # Dump as HTML.
-            p = sp.Popen(
-                "pandoc -f gfm -t html - --template %s "
-                "--toc --toc-depth 2" % templates_dir.joinpath("GitHub.html5"),
-                stdout=sp.PIPE,
-                stdin=sp.PIPE,
-            )
-            p.stdin.write(menu_markdown.getvalue().encode("utf8"))
-            stdout, stderr = p.communicate()
-
-            if args.output_path == "-":
-                print(stdout.strip())
-            else:
-                with open(args.output_path, "w") as output:
-                    output.write(stdout.decode("utf8"))
+    if args.output_path == "-":
+        print(rendered.decode("utf8"))
+    else:
+        with open(args.output_path, "w") as output:
+            output.write(rendered)
