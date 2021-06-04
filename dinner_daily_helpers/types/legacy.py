@@ -20,7 +20,7 @@ T = TypeVar("T")
 ureg = pint.get_application_registry()
 
 CRE_FAMILY_SIZE = re.compile(r"(?P<family_size>\d+)$")
-CRE_DATE = re.compile(f"^(?P<month>\w+)\s+(?P<day>\d+)(st|nd|rd|th)?\s+(?P<year>\d+)$")
+CRE_DATE = re.compile(rf"^(?P<month>\w+)\s+(?P<day>\d+)(st|nd|rd|th)?\s+(?P<year>\d+)$")
 LEGACY_MAP = {"Cals": "calories"}
 for k in ("Protein", "Fat", "Fiber", "Carbs"):
     LEGACY_MAP[k] = k.lower()
@@ -136,7 +136,7 @@ def from_legacy(menu: LegacyMenu) -> Menu:
 
 
 def split_sentences(paragraph: str) -> List[str]:
-    return re.sub(r"([\.!])+\s+", "\g<1>\n", paragraph).splitlines()
+    return re.sub(r"([\.!])+\s+", r"\g<1>\n", paragraph).splitlines()
 
 
 def ord(n):
