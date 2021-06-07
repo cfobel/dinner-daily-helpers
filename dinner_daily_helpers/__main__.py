@@ -53,9 +53,10 @@ if __name__ == "__main__":
     source_path = Path(args.source)
     menu = load_legacy_menu(source_path)
     rendered = render(menu, format_=format_)
+    rendered_str = rendered.decode("utf8")
 
     if args.output_path == "-":
-        print(rendered.decode("utf8"))
+        print(rendered_str)
     else:
         with open(args.output_path, "w") as output:
-            output.write(rendered)
+            output.write(rendered_str)
