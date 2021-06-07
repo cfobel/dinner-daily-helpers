@@ -182,6 +182,7 @@ def to_legacy(menu: Menu) -> LegacyMenu:
                 ],
             )
             for day_menu in menu.day_menus
+            if day_menu.main is not None
         ],
         servings=f"Serves { menu.metadata.family_size - 1 } to { menu.metadata.family_size }",
         store=menu.metadata.env,
