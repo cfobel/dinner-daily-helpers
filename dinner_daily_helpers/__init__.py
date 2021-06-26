@@ -8,14 +8,17 @@ import pandas as pd
 import pint
 
 
-ureg = pint.UnitRegistry(system='cgs')
+ureg = pint.UnitRegistry(system="cgs")
 
 # Add non-default units used by Dinner Daily.
-ureg.define('bulb = []')
-ureg.define('bunch = []')
-ureg.define('head = []')
-ureg.define('loaf = []')
-ureg.define('package = []')
+ureg.define("bulb = []")
+ureg.define("bunch = []")
+ureg.define("each = []")
+ureg.define("head = []")
+ureg.define("loaf = []")
+ureg.define("package = []")
+ureg.define("rib = []")
+ureg.define("tbs = tbsp")
 
 
 def get_staple_ingredients(html):
