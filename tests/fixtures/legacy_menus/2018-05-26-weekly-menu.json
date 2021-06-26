@@ -1,0 +1,282 @@
+{
+    "date": "May 26th 2018",
+    "meals": [
+        {
+            "duration": "35 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1/2 tbs olive oil",
+                    "1 garlic clove, minced",
+                    "3/4 lb turkey cutlets",
+                    "1/2 cup sour cream, low fat",
+                    "8 oz salsa, mild",
+                    "1/2 cup shredded cheddar cheese, low fat",
+                    "1/4 red onion, chopped",
+                    "3 tortillas, burrito size"
+                ],
+                "instructions": [
+                    "Preheat oven to 375.",
+                    "Spray 8 x 8 baking dish with cooking spray.",
+                    "Heat oil in skillet, add garlic and cook for 30 seconds.",
+                    "Add turkey and cook for 3 to 5 minutes each side.",
+                    "Remove from skillet, and let cool and chop into pieces.",
+                    "In separate bowl mix sour cream, salsa, cheese, & onion.",
+                    "Reserve about 1/2 cup of this mixture.",
+                    "Add chopped turkey to salsa mix and spread over each tortilla.",
+                    "Roll up & place in baking dish seam side down.",
+                    "Spread the 1 cup of reserved salsa mix over tortillas.",
+                    "Bake for 10 minutes."
+                ],
+                "title": "Easy Turkey Enchiladas"
+            },
+            "nutrition": [
+                "630 Cals",
+                "46g Protein",
+                "28g Fat",
+                "4g Fiber",
+                "47g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 package salad mix",
+                        "1 tbs salad dressing"
+                    ],
+                    "instructions": [
+                        "In a large bowl prepare salad mix according to package directions.",
+                        "Toss with dressing of choice."
+                    ],
+                    "title": "Green Salad"
+                }
+            ]
+        },
+        {
+            "duration": "25 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1 lb cod fillets",
+                    "1/4 bunch asparagus, chopped",
+                    "1 tomato, chopped",
+                    "1/2 tbs soy sauce (or tamari)",
+                    "1 tsp plain sesame oil",
+                    "1/2 tbs fresh lemon juice",
+                    "1/2 tsp basil (dried)",
+                    "1/4 cup shredded parmesan cheese"
+                ],
+                "instructions": [
+                    "Preheat oven to 375.",
+                    "Spray baking dish with cooking spray & place fish in dish.",
+                    "Season with salt & pepper.",
+                    "Place veggies on top of fish.",
+                    "Mix soy sauce, sesame oil, lemon juice & basil in small bowl.",
+                    "Drizzle over fish & top with cheese.",
+                    "Cover with foil and bake about 15 minutes until fish flakes easily with fork."
+                ],
+                "title": "Cod with Asparagus & Tomatoes"
+            },
+            "nutrition": [
+                "459 Cals",
+                "43g Protein",
+                "6g Fat",
+                "5g Fiber",
+                "55g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 package coleslaw mix"
+                    ],
+                    "instructions": [
+                        "Place coleslaw mix in skillet with a small amount of water and simmer, covered until tender, about 5 mins.",
+                        "Drain.",
+                        "Salt & pepper to taste.",
+                        "If you want, add a little vinaigrette style dressing, hot sauce, or favorite seasoning before serving."
+                    ],
+                    "title": "Steamed Shredded Cabbage"
+                },
+                {
+                    "ingredients": [
+                        "3/4 cup rice"
+                    ],
+                    "instructions": [
+                        "Prepare rice per package directions.",
+                        "Salt & pepper to taste.",
+                        "For variety, cook in broth instead of water, toss in some frozen veggies for the last few minutes of cooking, stir in a squeeze of lemon juice and/or 1 tbs olive oil, or toss in a handful of any chopped fresh herbs you have on hand."
+                    ],
+                    "title": "Rice"
+                }
+            ]
+        },
+        {
+            "duration": "35 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1 lb boneless chicken breast",
+                    "1/2 tbs olive oil",
+                    "1 shallot, chopped",
+                    "1/2 cup frozen corn",
+                    "1 tomato, chopped",
+                    "1 tbs fresh lime juice",
+                    "2 tbs fresh parsley, chopped"
+                ],
+                "instructions": [
+                    "Cut chicken into large cubes.",
+                    "Heat oil in skillet on medium heat.",
+                    "Add chicken & season with salt & pepper.",
+                    "Cook for 5 to 8 minutes until no longer pink inside.",
+                    "Remove from pan & set aside.",
+                    "Add shallots, corn, & tomatoes to pan.",
+                    "Cook for 5 to 8 minutes, then return chicken to pan.",
+                    "Add lime juice & parsley and heat for a few minutes longer and serve."
+                ],
+                "title": "Chicken with Herbed Tomato & Corn"
+            },
+            "notes": [
+                "Can prep shallots, tomatoes, & parsley in advance"
+            ],
+            "nutrition": [
+                "555 Cals",
+                "50g Protein",
+                "14g Fat",
+                "10g Fiber",
+                "62g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 tbs olive oil",
+                        "1/2 lb brussels sprouts"
+                    ],
+                    "instructions": [
+                        "Preheat oven to 400.",
+                        "Toss brussels sprouts with oil and place on baking dish.",
+                        "Salt and pepper to taste.",
+                        "Roast for 20-30 minutes until golden brown and tender."
+                    ],
+                    "title": "Roasted Brussels Sprouts"
+                },
+                {
+                    "ingredients": [
+                        "1 lb red potatoes, washed and quartered"
+                    ],
+                    "instructions": [
+                        "Boil potatoes in salted water until fork tender, about 20 mins.",
+                        "Drain and salt & pepper to taste."
+                    ],
+                    "title": "Boiled Potatoes"
+                }
+            ]
+        },
+        {
+            "duration": "4 hrs",
+            "main_dish": {
+                "ingredients": [
+                    "4 cups water",
+                    "1 onion, small, chopped",
+                    "2 garlic cloves, minced",
+                    "2 sweet potatoes, peeled and chopped",
+                    "4 cups vegetable broth",
+                    "1 cup wild rice",
+                    "1 tbs cumin (ground)",
+                    "1 tsp garlic powder",
+                    "1 tsp paprika",
+                    "15 oz black beans, drained & rinsed",
+                    "2 cups baby kale, roughly chopped"
+                ],
+                "instructions": [
+                    "Place all ingredients EXCEPT black beans and kale into slow cooker.",
+                    "Make sure rice (any rice will work if you don't have wild rice) is covered and add water if needed.",
+                    "Cover and cook on high for 3 hours.",
+                    "Remove lid and stir in black beans and salt & pepper.",
+                    "Replace lid and cook 45 minutes.",
+                    "Add kale, stir and serve.",
+                    "This recipe will make plenty of leftovers for lunches or another dinner.",
+                    "DON'T HAVE A SLOW COOKER?  You could easily do this recipe on the stove top in a large soup pot.",
+                    "For stove top, cook for about 40 minutes."
+                ],
+                "title": "Slow Cooker Black Bean & Wild Rice Soup"
+            },
+            "notes": [
+                "Easy Make Ahead"
+            ],
+            "nutrition": [
+                "420 Cals",
+                "18g Protein",
+                "11g Fat",
+                "10g Fiber",
+                "68g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "2 1/2 oz baby arugula",
+                        "1 peach, sliced",
+                        "2 tbs shredded cheddar cheese, low fat (optional)",
+                        "2 tbs pecans (optional)"
+                    ],
+                    "instructions": [
+                        "Toss arugula and peaches.",
+                        "Top with cheddar & pecans (if using), and sprinkle with dressing of choice."
+                    ],
+                    "title": "Arugula and Peach Salad"
+                }
+            ]
+        },
+        {
+            "duration": "25 mins",
+            "main_dish": {
+                "ingredients": [
+                    "1 garlic clove, minced, divided",
+                    "1/2 tsp ginger (ground), divided",
+                    "1/2 tbs soy sauce (or tamari)",
+                    "1/2 tbs sugar",
+                    "1 tbs cornstarch, divided",
+                    "1/2 tbs red wine vinegar",
+                    "3/4 lb boneless chicken breast, thin sliced, cut into strips",
+                    "1/2 cup chicken broth",
+                    "1 tbs vegetable oil, divided",
+                    "1/2 bunch asparagus, chopped (bite sized pieces)",
+                    "4 scallions, chopped"
+                ],
+                "instructions": [
+                    "In bowl mix half the garlic & ginger, all the soy sauce, sugar, 1/2 tsp cornstarch, 1/2 tsp salt, and vinegar.",
+                    "Toss with chicken strips and marinate at room temperature for 15 mins.",
+                    "Meanwhile, mix remaining cornstarch with the broth.",
+                    "Heat 1/2 tbs of oil in a large skillet over high.",
+                    "Add asparagus, scallions, remaining garlic & ginger.",
+                    "Stir-fry until asparagus is bright green, then add 2 tbs water and cover.",
+                    "Cook until asparagus in tender but still crisp, about 3 mins.",
+                    "Remove and set aside.",
+                    "Pour off any remaining water.",
+                    "Heat same skillet on high, then add remaining oil.",
+                    "Add chicken and stir-fry until cooked through & browned (internal temp of 165 degrees), about 3 to 5 mins.",
+                    "Return asparagus/scallions to skillet and toss to heat through.",
+                    "Stir in broth/cornstarch mixture and bring to a full boil to thicken.",
+                    "Remove from heat and serve."
+                ],
+                "title": "Asparagus & Chicken Stir Fry"
+            },
+            "nutrition": [
+                "260 Cals",
+                "30g Protein",
+                "10g Fat",
+                "4g Fiber",
+                "18g Carbs"
+            ],
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "8 oz baby carrots"
+                    ],
+                    "instructions": [
+                        "Cook carrots over simmering water for about 10 mins until tender."
+                    ],
+                    "title": "Baby Carrots"
+                }
+            ]
+        }
+    ],
+    "servings": "Serves 2 to 3",
+    "store": "Walmart",
+    "title": "Menu for the Fobel Family"
+}

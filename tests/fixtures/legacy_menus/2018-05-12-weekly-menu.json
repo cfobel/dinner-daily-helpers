@@ -1,0 +1,303 @@
+{
+    "date": "May 12th 2018", 
+    "meals": [
+        {
+            "duration": "30 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "1 lb boneless chicken breast", 
+                    "2 tbs soy sauce (or tamari)", 
+                    "1 garlic clove, minced", 
+                    "1/2 tbs honey", 
+                    "1/4 cup orange juice", 
+                    "1/2 tsp fresh ginger, minced"
+                ], 
+                "instructions": [
+                    "Place chicken in shallow baking dish.", 
+                    "Mix all remaining ingredients and pour over chicken.", 
+                    "Marinate up to 30 mins, if you have time.", 
+                    "Preheat grill or broiler to med heat.", 
+                    "Cook chicken for 15 to 20 mins, turning over half way, or until no longer pink inside, an internal temperature of 165."
+                ], 
+                "title": "Asian Baked Chicken"
+            }, 
+            "notes": [
+                "Can Make Marinade in Advance"
+            ], 
+            "nutrition": [
+                "566 Cals", 
+                "51g Protein", 
+                "8g Fat", 
+                "6g Fiber", 
+                "68g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/4 bunch asparagus"
+                    ], 
+                    "instructions": [
+                        "Cook asparagus over simmering water until bright green, about 5 to 8 mins."
+                    ], 
+                    "title": "Steamed Asparagus"
+                }, 
+                {
+                    "ingredients": [
+                        "3/4 cup rice", 
+                        "1 garlic clove, minced", 
+                        "1/2 lemon, juiced & zest", 
+                        "2 tbs fresh parsley, chopped", 
+                        "1/2 tbs olive oil", 
+                        "8 oz chick peas, drained & rinsed"
+                    ], 
+                    "instructions": [
+                        "Cook rice according to package.", 
+                        "Once rice is cooked transfer to a serving bowl.", 
+                        "Add olive oil to same saucepan used for rice heat on med.", 
+                        "Add garlic and cook for 30 secs.", 
+                        "Add rice back to pot and stir to coat with olive oil and garlic.", 
+                        "Transfer rice back to serving bowl and add chick peas, lemon zest & juice, parsley and salt & pepper, to taste.", 
+                        "Toss to combine and serve!"
+                    ], 
+                    "title": "Chick Pea Lemon Rice"
+                }
+            ]
+        }, 
+        {
+            "duration": "30 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "1/2 tsp thyme (dried)", 
+                    "1 tbs fresh lemon juice", 
+                    "2 1/2 tbs mayonnaise", 
+                    "3/4 lb salmon fillets"
+                ], 
+                "instructions": [
+                    "Preheat oven to 425.", 
+                    "In a small bowl mix thyme and lemon juice into mayonnaise.", 
+                    "Place salmon (skin side down) on a sheet of aluminum foil large enough to make a packet around fish.", 
+                    "Spread mayonnaise mixture on top.", 
+                    "Fold foil over fish and crimp edges to make a foil packet.", 
+                    "Bake 20-25 mins depending on thickness of fish, until it flakes easily with a fork.", 
+                    "To serve, carefully open the packet to release steam and check for doneness.", 
+                    "Use spatula to cut fish into portions, lifting fish away from its skin.", 
+                    "Also great on the grill!"
+                ], 
+                "title": "Salmon Thyme"
+            }, 
+            "nutrition": [
+                "614 Cals", 
+                "37g Protein", 
+                "30g Fat", 
+                "2g Fiber", 
+                "49g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/8 watermelon", 
+                        "3 scallions, chopped", 
+                        "1 tbs red wine vinegar", 
+                        "1 tbs fresh lemon juice", 
+                        "1 tbs olive oil", 
+                        "1/4 cup feta cheese"
+                    ], 
+                    "instructions": [
+                        "Cut up watermelon into large (any size and shape works).", 
+                        "Place in serving bowl and add scallions.", 
+                        "Mix vinegar, lemon juice & oil in small bowl with fork or whisk.", 
+                        "Pour over watermelon and gently stir to coat.", 
+                        "Sprinkle with feta and season with sea salt & black pepper."
+                    ], 
+                    "title": "Watermelon & Feta Salad"
+                }, 
+                {
+                    "ingredients": [
+                        "1 cup low fat milk", 
+                        "1 cup water", 
+                        "1/2 cup cornmeal (polenta)"
+                    ], 
+                    "instructions": [
+                        "Boil milk & water in large saucepan.", 
+                        "Whisk in cornmeal and salt & pepper to taste (up to 1/2 tsp salt).", 
+                        "Reduce heat to simmer.", 
+                        "Cook until thickened, 5-7 mins, whisking occasionally.", 
+                        "Once cooked, keep lid on tightly until ready to serve."
+                    ], 
+                    "title": "Creamy Polenta"
+                }
+            ]
+        }, 
+        {
+            "duration": "30 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "3/4 lb boneless chicken breast", 
+                    "1 tbs olive oil", 
+                    "1/2 onion, small, chopped", 
+                    " red pepper flakes, sprinkle (optional)", 
+                    "1 garlic clove, minced", 
+                    "1 tomato, chopped", 
+                    "1/2 cup coconut milk, light", 
+                    "2 tbs fresh lime juice", 
+                    "1/2 tsp salt", 
+                    "2 scallions, chopped", 
+                    "2 tbs fresh cilantro, chopped"
+                ], 
+                "instructions": [
+                    "Cut chicken into thin strips.", 
+                    "Heat oil in skillet over med heat.", 
+                    "Season chicken with salt & pepper & add to skillet.", 
+                    "Brown on both sides, about 4 minutes each.", 
+                    "Remove & set aside.", 
+                    "Add onion and red pepper flakes (optional) to pan & cook until soft, about 4 minutes.", 
+                    "Add garlic, cook 30 secs more.", 
+                    "Stir in tomatoes, coconut milk, lime juice, & salt.", 
+                    "Turn heat to low, cook for 5 mins more.", 
+                    "Return chicken to pan and continue cooking until no longer pink inside.", 
+                    "Top with scallions & cilantro."
+                ], 
+                "title": "Coconut Chicken"
+            }, 
+            "nutrition": [
+                "506 Cals", 
+                "37g Protein", 
+                "22g Fat", 
+                "5g Fiber", 
+                "44g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 package salad mix", 
+                        "1 tbs salad dressing"
+                    ], 
+                    "instructions": [
+                        "In a large bowl prepare salad mix according to package directions.", 
+                        "Toss with dressing of choice."
+                    ], 
+                    "title": "Green Salad"
+                }, 
+                {
+                    "ingredients": [
+                        "3/4 cup quinoa"
+                    ], 
+                    "instructions": [
+                        "Prepare quinoa according to package directions.", 
+                        "Salt & pepper to taste.", 
+                        "For variety, cook in broth instead of water, stir in a squeeze of lemon juice and/or 1 tbs olive oil, or toss in a handful of any chopped fresh herbs you have on hand."
+                    ], 
+                    "title": "Quinoa"
+                }
+            ]
+        }, 
+        {
+            "duration": "25 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "2 tomatoes, chopped", 
+                    "1 tbs balsamic vinegar", 
+                    "1 1/2 tbs fresh lemon juice", 
+                    "1 garlic clove, minced", 
+                    "6 oz thin spaghetti", 
+                    "1 cup baby spinach", 
+                    "1/4 cup shredded parmesan cheese"
+                ], 
+                "instructions": [
+                    "Place tomatoes in bowl with vinegar, lemon juice, garlic & season with salt & pepper.", 
+                    "Let sit for 30 minutes.", 
+                    "Cook pasta per package directions.", 
+                    "Mix tomatoes with pasta & add spinach.", 
+                    "Sprinkle with parmesan cheese."
+                ], 
+                "title": "Fresh Tomato Pasta with Baby Spinach"
+            }, 
+            "notes": [
+                "Can Mix Tomatoes with Dressing In Advance"
+            ], 
+            "nutrition": [
+                "344 Cals", 
+                "15g Protein", 
+                "4g Fat", 
+                "6g Fiber", 
+                "62g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 package coleslaw mix"
+                    ], 
+                    "instructions": [
+                        "Drizzle coleslaw with favorite salad dressing."
+                    ], 
+                    "title": "Coleslaw"
+                }
+            ]
+        }, 
+        {
+            "duration": "40 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "1 lb turkey cutlets", 
+                    "2 tbs honey mustard salad dressing, low fat", 
+                    "1/2 tbs olive oil", 
+                    "2 carrots, chopped", 
+                    "2 tbs chicken broth", 
+                    "1/4 bunch asparagus, chopped", 
+                    "1 scallion, chopped", 
+                    "1/4 cup shredded parmesan cheese"
+                ], 
+                "instructions": [
+                    "Place turkey in shallow baking dish & add honey mustard salad dressing.", 
+                    "Turn to coat & marinate up to 30 minutes.", 
+                    "Add oil to skillet & heat on medium.", 
+                    "Add turkey & brown quickly on each side, about 3 minutes each.", 
+                    "Remove & set aside.", 
+                    "Add carrots & broth to pan, turn heat to med & cover.", 
+                    "Cook 8 to 10 minutes until just tender.", 
+                    "Return turkey to pan & place on carrots, and top with asparagus.", 
+                    "Cover & cook for 5 to 8 minutes until turkey is cooked through.", 
+                    "Remove from heat & sprinkle with scallions & cheese."
+                ], 
+                "title": "Honey Mustard Turkey Skillet"
+            }, 
+            "nutrition": [
+                "547 Cals", 
+                "52g Protein", 
+                "19g Fat", 
+                "7g Fiber", 
+                "40g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1 zucchini, chopped"
+                    ], 
+                    "instructions": [
+                        "Steam zucchini for about 5 to 8 mins until tender."
+                    ], 
+                    "title": "Zucchini"
+                }, 
+                {
+                    "ingredients": [
+                        "1 lb baby potatoes", 
+                        "1 tbs olive oil", 
+                        "1 tbs fresh lemon juice", 
+                        "2 garlic cloves, minced"
+                    ], 
+                    "instructions": [
+                        "Preheat oven to 375.", 
+                        "Chop potatoes & place in roasting pan.", 
+                        "Add oil, lemon juice, garlic, salt & pepper.", 
+                        "Stir to coat.", 
+                        "Bake until golden and fork tender, about 35 to 40 minutes."
+                    ], 
+                    "title": "Roasted Potatoes"
+                }
+            ]
+        }
+    ], 
+    "servings": "Serves 2 to 3", 
+    "store": "Walmart", 
+    "title": "Menu for the Fobel Family"
+}

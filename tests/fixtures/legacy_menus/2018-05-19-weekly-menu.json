@@ -1,0 +1,303 @@
+{
+    "date": "May 19th 2018", 
+    "meals": [
+        {
+            "duration": "25 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "1 lb salmon steaks", 
+                    "1/2 tbs fresh basil, chopped", 
+                    "1 garlic clove, minced", 
+                    "1 tbs fresh lemon juice", 
+                    "1/2 tbs olive oil"
+                ], 
+                "instructions": [
+                    "Place fish in shallow baking dish.", 
+                    "In small bowl, mix basil, garlic, lemon juice & oil and pour over fish.", 
+                    "Refrigerate for up to 30 minutes, if time allows.", 
+                    "Preheat broiler to medium high.", 
+                    "Remove fish from marinade, place on oiled broiler pan & broil for 5-7 minutes.", 
+                    "Flip fish over and continue broiling until fish is no longer opaque and flakes easily with fork (about 5-7 minutes longer).", 
+                    "Also great on the grill!"
+                ], 
+                "title": "Basil & Garlic Salmon"
+            }, 
+            "notes": [
+                "Can Make Marinade in Advance"
+            ], 
+            "nutrition": [
+                "457 Cals", 
+                "39g Protein", 
+                "21g Fat", 
+                "4g Fiber", 
+                "27g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 tbs olive oil", 
+                        "1 garlic clove", 
+                        "1 zucchini, chopped", 
+                        "5 oz frozen corn, (fresh works, too)", 
+                        "1 tbs fresh lemon juice", 
+                        "2 tbs fresh parsley, chopped"
+                    ], 
+                    "instructions": [
+                        "Heat olive oil in medium skillet over med heat.", 
+                        "Add garlic and cook for about 1 minute, stirring frequently.", 
+                        "Add zucchini, corn and lemon juice to pan and cook for 5 to 8 mins until zucchini is tender.", 
+                        "Stir in parsley and season with salt and pepper.", 
+                        "Note: this is also delicious sprinkled with some freshly grated parmesan cheese before serving."
+                    ], 
+                    "title": "Lemon Zucchini & Corn"
+                }, 
+                {
+                    "ingredients": [
+                        "1/2 lb baby carrots", 
+                        "1 tbs butter", 
+                        "1/2 tbs honey", 
+                        "1 tbs fresh lemon juice"
+                    ], 
+                    "instructions": [
+                        "Place carrots in a medium saucepan and add water to cover them.", 
+                        "Bring to a boil, reduce heat to med and simmer until just tender, about 5 to 8 minutes.", 
+                        "Drain water and stir butter, honey and lemon juice into pan with carrots.", 
+                        "Heat until butter is melted and carrots are glazed, 2 to 3 minutes."
+                    ], 
+                    "title": "Honey Glazed Carrots"
+                }
+            ]
+        }, 
+        {
+            "duration": "40 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "2 tbs vegetable oil", 
+                    "1 onion, small, diced", 
+                    "3 garlic cloves, minced", 
+                    "6 cups chicken broth", 
+                    "14.5 oz diced tomatoes", 
+                    "15 oz black beans, rinsed & drained", 
+                    "1 sprinkle red pepper flakes (optional)", 
+                    "1 1/2 lbs boneless chicken thighs", 
+                    "3 limes, juiced", 
+                    "1 cup fresh cilantro, chopped", 
+                    "1 avocado, sliced", 
+                    "1 cup shredded mexican cheese, low fat", 
+                    "2 tortillas, burrito size"
+                ], 
+                "instructions": [
+                    "Heat oil in large pot.", 
+                    "Add onions and cook for 2 to 3 mins until softened.", 
+                    "Add garlic and cook for another min.", 
+                    "Add broth, tomatoes, beans, & red pepper flakes (if using) to pot and bring to boil.", 
+                    "Lower heat, add chicken, and season with salt & pepper.", 
+                    "Cook for 20 to 25 mins until chicken is cooked through.", 
+                    "Remove chicken from pot and set aside to cool.", 
+                    "When chicken has cooled slightly, shred and return to pot.", 
+                    "Add lime juice and cilantro to soup and adjust salt & pepper to taste.", 
+                    "Serve soup topped with avocado and cheese.", 
+                    "To toast tortillas: preheat oven to 400.", 
+                    "Place tortillas on cookie sheet.", 
+                    "Place in oven and cook for 3 to 5 mins until golden and crisp.", 
+                    "Cut into wedges and serve with soup.", 
+                    "This recipe makes plenty of leftovers for lunches or another dinner."
+                ], 
+                "title": "Chicken Tortilla Soup"
+            }, 
+            "nutrition": [
+                "698 Cals", 
+                "40g Protein", 
+                "39g Fat", 
+                "8g Fiber", 
+                "49g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "2 oz baby arugula", 
+                        "1 tbs fresh lemon juice", 
+                        "2 tbs olive oil"
+                    ], 
+                    "instructions": [
+                        "Toss arugula with lemon juice and olive oil.", 
+                        "Season with salt & pepper to taste."
+                    ], 
+                    "title": "Simple Arugula Salad"
+                }
+            ]
+        }, 
+        {
+            "duration": "30 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "3 tbs olive oil, divided", 
+                    "2 red/orange/yellow bell peppers, sliced", 
+                    "1 zucchini, sliced thin", 
+                    "3 garlic cloves, minced", 
+                    "1 lb shrimp, raw, peeled & deveined", 
+                    "1 tbs smoked (or regular) paprika", 
+                    "1 1/2 tbs fresh lemon juice"
+                ], 
+                "instructions": [
+                    "Heat half the olive oil in a large, deep skillet over med heat.", 
+                    "Add peppers, cover and cook, stirring often for 6 mins.", 
+                    "Add zucchini, and continue to cook for 3 mins longer until veggies are tender.", 
+                    "Transfer to serving dish and keep warm.", 
+                    "Combine garlic and remaining oil in the same skillet over med heat.", 
+                    "Cook, stirring for 1 min or until fragrant.", 
+                    "Stir in shrimp and sprinkle with paprika and season with salt & pepper to taste.", 
+                    "Cook, stirring often for 5 to 7 mins until pink on all sides.", 
+                    "If pan becomes dry, add 1 to 2 tablespoons of water.", 
+                    "Add lemon juice and cook 1 min until the pan juices are bubbly and slightly thickened.", 
+                    "Serve shrimp over vegetables."
+                ], 
+                "title": "Spanish Shrimp with Garlic Sauce"
+            }, 
+            "notes": [
+                "Can Prep Shrimp in Advance"
+            ], 
+            "nutrition": [
+                "424 Cals", 
+                "30g Protein", 
+                "19g Fat", 
+                "4g Fiber", 
+                "37g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "3 corn on the cob"
+                    ], 
+                    "instructions": [
+                        "Husk corn & bring large pot of water to boil.", 
+                        "Add corn & cook for 5 minutes until just tender.", 
+                        "Serve with butter, salt & pepper."
+                    ], 
+                    "title": "Corn on the Cob"
+                }
+            ]
+        }, 
+        {
+            "duration": "30 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "4 eggs", 
+                    "3/4 tsp salt, divided", 
+                    "1/2 lb ground turkey", 
+                    "1/2 tbs maple syrup", 
+                    "1/4 tsp sage (dried)", 
+                    "1/4 tsp thyme (dried)", 
+                    "1/4 tsp black pepper", 
+                    "1 tbs olive oil", 
+                    "1 scallion, chopped (optional)"
+                ], 
+                "instructions": [
+                    "Beat eggs in bowl with 1/4 tsp of salt.", 
+                    "In separate bowl, mix turkey, maple syrup, sage, thyme, pepper and remaining salt together.", 
+                    "( (You are essentially making breakfast sausages).", 
+                    "Heat oil in large skillet on medium heat and add turkey mixture and scallion (if using).", 
+                    "Brown turkey for about 3 min, breaking up lumps with spatula.", 
+                    "Pour eggs into skillet.", 
+                    "Reduce the heat to low.", 
+                    "Cover skillet and cook for 10 to 15 min until eggs are set.", 
+                    "Loosen eggs and invert onto a plate.", 
+                    "Season with salt & pepper to taste, cut in wedges and serve."
+                ], 
+                "title": "Breakfast for Dinner"
+            }, 
+            "nutrition": [
+                "497 Cals", 
+                "30g Protein", 
+                "33g Fat", 
+                "5g Fiber", 
+                "22g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 cup frozen peas", 
+                        "3 oz baby spinach", 
+                        "1 tbs olive oil", 
+                        "1/2 tbs fresh lemon juice", 
+                        "1/4 cup feta cheese"
+                    ], 
+                    "instructions": [
+                        "Spread peas on plate and microwave about 2 minutes until bright green.", 
+                        "Place spinach in salad bowl.", 
+                        "To make dressing, mix olive oil & fresh lemon juice with a whisk or fork until well blended.", 
+                        "Taste and adjust amount of lemon juice.", 
+                        "Toss spinach leaves with dressing, give it a good sprinkle of sea salt and black pepper.", 
+                        "Top with peas and feta.", 
+                        "Note: the dressing is intended to give a light coating only."
+                    ], 
+                    "title": "Spinach, Peas & Feta Salad"
+                }, 
+                {
+                    "ingredients": [
+                        "2 cups berries"
+                    ], 
+                    "instructions": [
+                        "Serve with mix of fresh berries."
+                    ], 
+                    "title": "Fresh Berries"
+                }
+            ]
+        }, 
+        {
+            "duration": "35 mins", 
+            "main_dish": {
+                "ingredients": [
+                    "1/2 tbs olive oil", 
+                    "1 onion, medium, chopped", 
+                    "1 garlic clove, minced", 
+                    "8 oz black beans, drained & rinsed", 
+                    "8 oz red kidney beans, drained & rinsed", 
+                    "1/2 cup baby carrots, chopped", 
+                    "8 oz diced tomatoes with basil, garlic & oregano", 
+                    "8 oz chick peas, drained & rinsed", 
+                    "1/4 cup vegetable broth", 
+                    "1/2 tsp oregano (dried)", 
+                    "1/2 cup shredded parmesan cheese (optional)"
+                ], 
+                "instructions": [
+                    "Heat oil in large saucepan.", 
+                    "Add onion & cook for 5 mins until softened.", 
+                    "Add garlic & stir for 30 secs.", 
+                    "Stir in beans, carrots, tomatoes, chick peas, broth, and oregano.", 
+                    "Season with salt & pepper.", 
+                    "Bring to low boil, turn heat to low, cover & let simmer for 15 mins.", 
+                    "Season with salt & pepper to taste.", 
+                    "Serve.", 
+                    "Optional: sprinkle with cheese."
+                ], 
+                "title": "Three Bean Vegetarian Stew"
+            }, 
+            "notes": [
+                "Can Make Ahead-Even Better the Next Day!"
+            ], 
+            "nutrition": [
+                "381 Cals", 
+                "21g Protein", 
+                "6g Fat", 
+                "21g Fiber", 
+                "64g Carbs"
+            ], 
+            "side_dishes": [
+                {
+                    "ingredients": [
+                        "1/2 package broccoli slaw"
+                    ], 
+                    "instructions": [
+                        "Toss broccoli slaw with salad dressing.", 
+                        "We like it with basic Italian."
+                    ], 
+                    "title": "Broccoli Slaw"
+                }
+            ]
+        }
+    ], 
+    "servings": "Serves 2 to 3", 
+    "store": "Walmart", 
+    "title": "Menu for the Fobel Family"
+}
