@@ -99,6 +99,7 @@ def scrape_week(
 
     #  https://selenium-python.readthedocs.io/waits.html#implicit-waits
     driver.implicitly_wait(10)
+    driver.maximize_window()
     driver.get("https://app.thedinnerdaily.com")
 
     login_fields_ = login_fields(driver)
