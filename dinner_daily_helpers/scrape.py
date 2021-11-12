@@ -4,14 +4,15 @@ from typing import Optional
 
 import chromedriver_binary  # Adds chromedriver binary to path
 import selenium.webdriver.chrome.webdriver
+from selenium.webdriver.common.keys import Keys
 import selenium.webdriver.remote.webelement
 from pydantic import BaseModel
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from .types.week import Week, WeekOption
 from .types.menu import Menu
 from .types.shopping_list import ShoppingList
+from .types.week import Week, WeekOption
 
 __all__ = ["scrape_week"]
 
@@ -99,14 +100,14 @@ def scrape_week(
 
     #  https://selenium-python.readthedocs.io/waits.html#implicit-waits
     driver.implicitly_wait(10)
+    driver.maximize_window()
     driver.get("https://app.thedinnerdaily.com")
 
     login_fields_ = login_fields(driver)
 
     login_fields_.email.send_keys(username)
     login_fields_.password.send_keys(password)
-
-    login_fields_.button.click()
+    login_fields_.password.send_keys(Keys.ENTER)
 
     # Retry 5 times to read access token from local storage; wait 1 second between
     for i in range(5):
