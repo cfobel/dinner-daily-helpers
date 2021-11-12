@@ -10,9 +10,9 @@ from pydantic import BaseModel
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from .types.week import Week, WeekOption
 from .types.menu import Menu
 from .types.shopping_list import ShoppingList
+from .types.week import Week, WeekOption
 
 __all__ = ["scrape_week"]
 
