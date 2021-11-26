@@ -31,27 +31,27 @@ class Session(BaseModel):
     refreshToken: str  # XXX TODO: find refresh URL
 
 
-def shadow(
+def shadow_query_selector(
     browser: selenium.webdriver.chrome.webdriver.WebDriver,
     element: selenium.webdriver.remote.webelement.WebElement,
+    query: str,
 ) -> selenium.webdriver.remote.webelement.WebElement:
-    return browser.execute_script("return arguments[0].shadowRoot", element)
+    return browser.execute_script(
+        f'return arguments[0].shadowRoot.querySelector("{query}")', element
+    )
 
 
 def login_fields(
     browser: selenium.webdriver.chrome.webdriver.WebDriver,
 ) -> LoginFields:
     dd_app = browser.find_element_by_tag_name("dd-app")
-    dd_app_shadow_root = shadow(browser, dd_app)
-    dd_login = dd_app_shadow_root.find_element_by_tag_name("dd-login")
-    dd_login_shadow_root = shadow(browser, dd_login)
-    main_fab = shadow(browser, dd_app_shadow_root.find_element_by_id("main-fab"))
-    log_in_button = main_fab.find_element_by_tag_name("button")
+    dd_login = shadow_query_selector(browser, dd_app, "dd-login")
+    main_fab = shadow_query_selector(browser, dd_app, "#main-fab")
+    log_in_button = shadow_query_selector(browser, main_fab, "button")
 
-    def get_input_field(id_: str):
-        field = dd_login_shadow_root.find_element_by_id(id_)
-        field_shadow_root = shadow(browser, field)
-        return field_shadow_root.find_element_by_css_selector("input")
+    def get_input_field(id_: str) -> selenium.webdriver.remote.webelement.WebElement:
+        field = shadow_query_selector(browser, dd_login, id_)
+        return shadow_query_selector(browser, field, "input")
 
     return LoginFields(
         button=log_in_button,
